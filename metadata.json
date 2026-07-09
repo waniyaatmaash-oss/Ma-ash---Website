@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Ma\u0027ash School",
+  "description": "The education arm of Ma\u0027ash — bringing financial literacy into classrooms, homes, and offices across Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
