@@ -251,25 +251,25 @@ export default function WhatsNext() {
             <div className="flex -space-x-3 overflow-hidden">
               <img
                 className="inline-block h-10 w-10 rounded-full ring-2 ring-[#fbf9f5]"
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
+                src="https://res.cloudinary.com/oh1asjml/image/upload/v1783661151/dfe91676-8853-4219-ae45-e9a8b1693f7d_ihyw85.jpg"
                 alt="Educator"
                 referrerPolicy="no-referrer"
               />
               <img
                 className="inline-block h-10 w-10 rounded-full ring-2 ring-[#fbf9f5]"
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100&h=100"
+                src="https://res.cloudinary.com/oh1asjml/image/upload/v1783661113/d9f8d804-0864-4509-a7f8-745df8b6c382_qjmvgk.jpg"
                 alt="Founder"
                 referrerPolicy="no-referrer"
               />
               <img
                 className="inline-block h-10 w-10 rounded-full ring-2 ring-[#fbf9f5]"
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100"
+                src="https://res.cloudinary.com/oh1asjml/image/upload/v1783661040/f154f956-ab81-4a4a-8274-c1d6cc18c20e_vv2zbv.jpg"
                 alt="Student"
                 referrerPolicy="no-referrer"
               />
               <img
                 className="inline-block h-10 w-10 rounded-full ring-2 ring-[#fbf9f5]"
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100&h=100"
+                src="https://res.cloudinary.com/oh1asjml/image/upload/v1783660937/d594a969-1fc8-4b53-a5ce-f51d43c75e21_p7dsnj.jpg"
                 alt="Educator"
                 referrerPolicy="no-referrer"
               />
