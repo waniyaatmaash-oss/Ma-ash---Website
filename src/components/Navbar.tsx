@@ -30,7 +30,7 @@ export default function Navbar({ onBookMeeting, onSelectPersona }: NavbarProps) 
     { label: "Partnerships", href: "#persona-section" },
     { label: "About", href: "#our-why-section" },
     { label: "Careers", href: "#careers-section" },
-    { label: "Contact", href: "#contact-section" },
+    { label: "Contact", href: "#footer" },
   ];
 
   const handleLinkClick = (e: React.MouseEvent, href: string, label: string) => {

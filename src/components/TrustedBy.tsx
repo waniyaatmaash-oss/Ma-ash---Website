@@ -10,7 +10,11 @@ interface Testimonial {
   stars: number;
 }
 
-export default function TrustedBy() {
+interface TrustedByProps {
+  onBookMeeting: () => void;
+}
+
+export default function TrustedBy({ onBookMeeting }: TrustedByProps) {
   const [showTestimonials, setShowTestimonials] = useState<boolean>(false);
 
   const images = [
@@ -119,7 +123,7 @@ export default function TrustedBy() {
           onClick={() => setShowTestimonials(true)}
           className="group flex items-center justify-center gap-2.5 bg-[#1f310c] hover:bg-[#111b06] text-white px-6.5 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm cursor-pointer"
         >
-          Read Success Stories
+          Join Our Success Stories
           <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
         </motion.button>
       </div>
@@ -267,8 +271,7 @@ export default function TrustedBy() {
                 <button
                   onClick={() => {
                     setShowTestimonials(false);
-                    const el = document.getElementById("contact-section");
-                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                    onBookMeeting();
                   }}
                   className="w-full flex items-center justify-center gap-2 bg-[#7a6200] hover:bg-[#604d00] text-white py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-colors"
                 >

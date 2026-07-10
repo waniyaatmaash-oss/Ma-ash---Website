@@ -66,7 +66,7 @@ export default function Founders() {
               <img 
                 src={foundersPhotoUrl} 
                 alt="Ma'ash Founders - Hashim Qasmi & Waniya Hashim" 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                className="w-full h-full object-cover transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />
 
@@ -99,32 +99,6 @@ export default function Founders() {
                     <span className="text-[10px] font-bold text-white bg-black/60 px-2 py-0.5 rounded backdrop-blur-xs shadow-sm">Waniya</span>
                   </div>
                 </div>
-              </div>
-
-              {/* OVERLAY BIO CARD (Fades in dynamically near target person) */}
-              <div className="absolute inset-x-4 bottom-4 z-30 hidden md:block pointer-events-none">
-                <AnimatePresence mode="wait">
-                  {hoveredFounder && (
-                    <motion.div
-                      key={hoveredFounder}
-                      initial={{ opacity: 0, y: 15 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 15 }}
-                      transition={{ duration: 0.25 }}
-                      className="bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-[#1f310c]/15 shadow-2xl max-w-sm mx-auto"
-                    >
-                      <div className="flex items-center gap-2 text-[10px] font-bold text-[#7a6200] uppercase tracking-wider mb-1.5 font-sans">
-                        <Info size={12} />
-                        Meet the team
-                      </div>
-                      <h4 className="font-serif text-lg font-bold text-[#1f310c]">{bios[hoveredFounder].name}</h4>
-                      <div className="text-[11px] font-bold text-[#7a6200] uppercase tracking-wide mt-0.5">{bios[hoveredFounder].title}</div>
-                      <div className="w-8 h-[1.5px] bg-[#7a6200] my-2" />
-                      <div className="text-[10px] text-[#1f310c]/60 font-semibold mb-1 leading-snug">{bios[hoveredFounder].credentials}</div>
-                      <p className="text-xs text-[#5C6454] leading-relaxed mt-1 font-medium">{bios[hoveredFounder].text}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
               </div>
 
             </div>

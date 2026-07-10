@@ -779,7 +779,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
                       </div>
                     </div>
                     <div className="text-xs font-bold text-[#7a6200] inline-flex items-center gap-1 mt-2 self-end group-hover:underline">
-                      View Framework <ChevronRight size={14} className="transition-transform group-hover:translate-x-1" />
+                      Book 30 Mins <ChevronRight size={14} className="transition-transform group-hover:translate-x-1" />
                     </div>
                   </div>
 
@@ -800,7 +800,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
                       </div>
                     </div>
                     <div className="text-xs font-bold text-[#7a6200] inline-flex items-center gap-1 mt-2 self-end group-hover:underline">
-                      View Framework <ChevronRight size={14} className="transition-transform group-hover:translate-x-1" />
+                      Book 30 Mins <ChevronRight size={14} className="transition-transform group-hover:translate-x-1" />
                     </div>
                   </div>
 
@@ -821,7 +821,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
                       </div>
                     </div>
                     <div className="text-xs font-bold text-[#7a6200] inline-flex items-center gap-1 mt-2 self-end group-hover:underline">
-                      View Framework <ChevronRight size={14} className="transition-transform group-hover:translate-x-1" />
+                      Book 30 Mins <ChevronRight size={14} className="transition-transform group-hover:translate-x-1" />
                     </div>
                   </div>
 
@@ -842,7 +842,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
                       </div>
                     </div>
                     <div className="text-xs font-bold text-[#7a6200] inline-flex items-center gap-1 mt-2 self-end group-hover:underline">
-                      View Framework <ChevronRight size={14} className="transition-transform group-hover:translate-x-1" />
+                      Book 30 Mins <ChevronRight size={14} className="transition-transform group-hover:translate-x-1" />
                     </div>
                   </div>
                 </div>

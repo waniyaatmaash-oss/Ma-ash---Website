@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1f310c] border-t border-[#7a6200]/20 pt-16 pb-8 px-6 sm:px-12 lg:px-20 relative overflow-hidden">
+    <footer id="footer" className="bg-[#1f310c] border-t border-[#7a6200]/20 pt-16 pb-8 px-6 sm:px-12 lg:px-20 relative overflow-hidden">
       {/* Decorative Gold Accent */}
       <div className="absolute top-0 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-[#7a6200]/50 to-transparent" />
       
@@ -30,7 +30,7 @@ export default function Footer() {
           <motion.img 
             src="https://res.cloudinary.com/oh1asjml/image/upload/v1783595012/1_3_zr82q8.png" 
             alt="Ma'ash Logo" 
-            className="w-32 h-auto"
+            className="w-48 h-auto"
             whileHover={{ scale: 1.05, rotate: -2 }}
             referrerPolicy="no-referrer"
           />
@@ -56,16 +56,24 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <h4 className="font-serif text-sm font-bold text-[#7a6200] uppercase tracking-wider mb-1">Follow Us</h4>
           <div className="flex gap-4">
-            {[Instagram, Linkedin, Twitter].map((Icon, i) => (
-              <motion.a 
-                key={i} 
-                href="#" 
-                className="p-2 rounded-full border border-[#7a6200]/40 hover:border-[#7a6200] text-[#FAF8F3]/80 hover:text-[#7a6200] transition-all"
-                whileHover={{ y: -5, scale: 1.1 }}
-              >
-                <Icon size={16} />
-              </motion.a>
-            ))}
+            <motion.a 
+              href="https://www.instagram.com/maashschool/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full border border-[#7a6200]/40 hover:border-[#7a6200] text-[#FAF8F3]/80 hover:text-[#7a6200] transition-all"
+              whileHover={{ y: -5, scale: 1.1 }}
+            >
+              <Instagram size={16} />
+            </motion.a>
+            <motion.a 
+              href="https://www.linkedin.com/company/maashcollective/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full border border-[#7a6200]/40 hover:border-[#7a6200] text-[#FAF8F3]/80 hover:text-[#7a6200] transition-all"
+              whileHover={{ y: -5, scale: 1.1 }}
+            >
+              <Linkedin size={16} />
+            </motion.a>
           </div>
         </div>
       </div>

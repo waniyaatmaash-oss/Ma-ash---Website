@@ -13,6 +13,7 @@ import Founders from "./components/Founders";
 import Community from "./components/Community";
 import WhatsNext from "./components/WhatsNext";
 import Footer from "./components/Footer";
+import ContactAndCareers from "./components/ContactAndCareers";
 import TornPaperDivider from "./components/TornPaperDivider";
 
 export default function App() {
@@ -133,7 +134,7 @@ export default function App() {
       <OurWhySection />
 
       {/* Section 3: Trusted By */}
-      <TrustedBy />
+      <TrustedBy onBookMeeting={() => setIsBookingOpen(true)} />
 
       {/* Section 4: Persona Selector (Audience Offering sections) */}
       <PersonaSelector 
@@ -151,6 +152,10 @@ export default function App() {
       {/* Section 7: What's Next (Roadmap) */}
       <WhatsNext />
 
+      <ContactAndCareers 
+        onSelectPersona={setActivePersona}
+      />
+ 
       <Footer />
 
       {/* Interactive Modal Layer: Meeting Scheduler */}
