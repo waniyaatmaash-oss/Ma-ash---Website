@@ -10,11 +10,7 @@ interface Testimonial {
   stars: number;
 }
 
-interface TrustedByProps {
-  onBookMeeting: () => void;
-}
-
-export default function TrustedBy({ onBookMeeting }: TrustedByProps) {
+export default function TrustedBy() {
   const [showTestimonials, setShowTestimonials] = useState<boolean>(false);
 
   const images = [
@@ -74,6 +70,10 @@ export default function TrustedBy({ onBookMeeting }: TrustedByProps) {
       stars: 5
     }
   ];
+
+  const handleBookMeeting = () => {
+    window.open("https://calendly.com/waniyafrommaash/30min", "_blank");
+  };
 
   return (
     <section 
@@ -269,10 +269,7 @@ export default function TrustedBy({ onBookMeeting }: TrustedByProps) {
               {/* Drawer Footer */}
               <div className="p-6 border-t border-[#1f310c]/10 bg-white">
                 <button
-                  onClick={() => {
-                    setShowTestimonials(false);
-                    onBookMeeting();
-                  }}
+                  onClick={handleBookMeeting}
                   className="w-full flex items-center justify-center gap-2 bg-[#7a6200] hover:bg-[#604d00] text-white py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-colors"
                 >
                   Join Our Partner Network

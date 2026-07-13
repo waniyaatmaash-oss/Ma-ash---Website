@@ -6,10 +6,9 @@ import { Pillar } from "../types";
 interface WorksModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onBookMeeting: () => void;
 }
 
-export default function WorksModal({ isOpen, onClose, onBookMeeting }: WorksModalProps) {
+export default function WorksModal({ isOpen, onClose }: WorksModalProps) {
   const [activeTab, setActiveTab] = useState<string>("classrooms");
 
   const pillars: Pillar[] = [
@@ -78,7 +77,7 @@ export default function WorksModal({ isOpen, onClose, onBookMeeting }: WorksModa
 
   const handleBookTrigger = () => {
     onClose();
-    onBookMeeting();
+    window.open("https://calendly.com/waniyafrommaash/30min", "_blank");
   };
 
   return (

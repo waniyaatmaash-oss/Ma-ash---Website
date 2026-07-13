@@ -5,11 +5,10 @@ import { NavLink } from "../types";
 import { smoothScrollTo, smoothScrollToTop } from "../utils/scroll";
 
 interface NavbarProps {
-  onBookMeeting: () => void;
   onSelectPersona: (personaId: string) => void;
 }
 
-export default function Navbar({ onBookMeeting, onSelectPersona }: NavbarProps) {
+export default function Navbar({ onSelectPersona }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
@@ -54,6 +53,10 @@ export default function Navbar({ onBookMeeting, onSelectPersona }: NavbarProps) 
     }
   };
 
+  const handleBookMeeting = () => {
+    window.open("https://calendly.com/waniyafrommaash/30min", "_blank");
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 w-full z-50 select-none transition-all duration-300 ${
       isScrolled 
@@ -95,7 +98,7 @@ export default function Navbar({ onBookMeeting, onSelectPersona }: NavbarProps) 
         {/* BOOK A MEETING BUTTON */}
         <div className="hidden md:flex items-center">
           <button
-            onClick={onBookMeeting}
+            onClick={handleBookMeeting}
             className={`flex items-center gap-2 bg-[#7a6200] hover:bg-[#604d00] text-white rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow active:scale-[0.98] cursor-pointer ${
               isScrolled ? "px-4.5 py-2" : "px-5.5 py-2.5"
             }`}
@@ -145,7 +148,7 @@ export default function Navbar({ onBookMeeting, onSelectPersona }: NavbarProps) 
                 <button
                   onClick={() => {
                     setMobileMenuOpen(false);
-                    onBookMeeting();
+                    handleBookMeeting();
                   }}
                   className="w-full flex items-center justify-center gap-2 bg-[#7a6200] hover:bg-[#604d00] text-white py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all"
                 >

@@ -8,6 +8,7 @@ import {
   BookOpen
 } from "lucide-react";
 
+
 interface AudienceCardProps {
   key?: string;
   id: string;
@@ -161,12 +162,11 @@ function AudienceCard({ id, label, isActive, onClick }: AudienceCardProps) {
 }
 
 interface PersonaSelectorProps {
-  onBookMeeting: () => void;
   activePersona: string;
   setActivePersona: (personaId: string) => void;
 }
 
-export default function PersonaSelector({ onBookMeeting, activePersona, setActivePersona }: PersonaSelectorProps) {
+export default function PersonaSelector({ activePersona, setActivePersona }: PersonaSelectorProps) {
   // Nested interactive form states
   const [activeParentTab, setActiveParentTab] = useState<"trust" | "benefits">("trust");
 
@@ -390,7 +390,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
                       hidden: { opacity: 0, y: 15 },
                       show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
                     }}
-                    onClick={() => setActiveFormType("consultation")}
+                    onClick={() => window.open("https://calendly.com/waniyafrommaash/30min", "_blank")}
                     className="group bg-white border border-[#1f310c]/10 border-b-2 hover:border-b-[#7a6200] p-6 rounded-2xl hover:bg-[#1f310c]/2 hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col justify-between relative cursor-pointer"
                   >
                     <span className="absolute top-4 right-4 text-[9px] font-extrabold uppercase tracking-wider text-[#1f310c] bg-[#1f310c]/10 px-2.5 py-1 rounded-full">
@@ -421,7 +421,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
                       hidden: { opacity: 0, y: 15 },
                       show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
                     }}
-                    onClick={() => setActiveFormType("consultation")}
+                    onClick={() => window.open("https://calendly.com/waniyafrommaash/30min", "_blank")}
                     className="group bg-white border border-[#1f310c]/10 border-b-2 hover:border-b-[#7a6200] p-6 rounded-2xl hover:bg-[#1f310c]/2 hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col justify-between relative cursor-pointer"
                   >
                     <span className="absolute top-4 right-4 text-[9px] font-extrabold uppercase tracking-wider text-[#7a6200] bg-[#7a6200]/10 px-2.5 py-1 rounded-full">
@@ -452,7 +452,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
                       hidden: { opacity: 0, y: 15 },
                       show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
                     }}
-                    onClick={() => setActiveFormType("consultation")}
+                    onClick={() => window.open("https://calendly.com/waniyafrommaash/30min", "_blank")}
                     className="group bg-white border border-[#1f310c]/10 border-b-2 hover:border-b-[#7a6200] p-6 rounded-2xl hover:bg-[#1f310c]/2 hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col justify-between relative cursor-pointer"
                   >
                     <span className="absolute top-4 right-4 text-[9px] font-extrabold uppercase tracking-wider text-[#1f310c] bg-[#1f310c]/10 px-2.5 py-1 rounded-full">
@@ -483,7 +483,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
                       hidden: { opacity: 0, y: 15 },
                       show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
                     }}
-                    onClick={() => setActiveFormType("consultation")}
+                    onClick={() => window.open("https://calendly.com/waniyafrommaash/30min", "_blank")}
                     className="group bg-white border border-[#1f310c]/10 border-b-2 hover:border-b-[#7a6200] p-6 rounded-2xl hover:bg-[#1f310c]/2 hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col justify-between relative cursor-pointer"
                   >
                     <span className="absolute top-4 right-4 text-[9px] font-extrabold uppercase tracking-wider text-[#7a6200] bg-[#7a6200]/10 px-2.5 py-1 rounded-full">
@@ -550,7 +550,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
                     Request a Curriculum Proposal
                   </button>
                   <button
-                    onClick={onBookMeeting}
+                    onClick={() => window.open("https://calendly.com/waniyafrommaash/30min", "_blank")}
                     className="border border-[#1f310c]/30 hover:border-[#1f310c] text-[#1f310c] font-bold text-xs uppercase tracking-wider py-3.5 px-6 rounded-full active:scale-[0.98] transition-all cursor-pointer"
                   >
                     Book a Meeting
@@ -764,7 +764,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                   {/* Card 1 */}
                   <div 
-                    onClick={() => setActiveFormType("consultation")}
+                    onClick={() => window.open("https://calendly.com/waniyafrommaash/30min", "_blank")}
                     className="bg-white border border-[#7a6200]/15 p-6 rounded-2xl hover:border-[#7a6200]/40 hover:-translate-y-1 hover:shadow-md hover:shadow-[#7a6200]/5 transition-all duration-300 flex flex-col justify-between cursor-pointer group border-b-2 hover:border-b-[#7a6200]"
                   >
                     <div className="flex gap-4">
@@ -785,7 +785,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
 
                   {/* Card 2 */}
                   <div 
-                    onClick={() => setActiveFormType("consultation")}
+                    onClick={() => window.open("https://calendly.com/waniyafrommaash/30min", "_blank")}
                     className="bg-white border border-[#7a6200]/15 p-6 rounded-2xl hover:border-[#7a6200]/40 hover:-translate-y-1 hover:shadow-md hover:shadow-[#7a6200]/5 transition-all duration-300 flex flex-col justify-between cursor-pointer group border-b-2 hover:border-b-[#7a6200]"
                   >
                     <div className="flex gap-4">
@@ -806,7 +806,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
 
                   {/* Card 3 */}
                   <div 
-                    onClick={() => setActiveFormType("consultation")}
+                    onClick={() => window.open("https://calendly.com/waniyafrommaash/30min", "_blank")}
                     className="bg-white border border-[#7a6200]/15 p-6 rounded-2xl hover:border-[#7a6200]/40 hover:-translate-y-1 hover:shadow-md hover:shadow-[#7a6200]/5 transition-all duration-300 flex flex-col justify-between cursor-pointer group border-b-2 hover:border-b-[#7a6200]"
                   >
                     <div className="flex gap-4">
@@ -827,7 +827,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
 
                   {/* Card 4 */}
                   <div 
-                    onClick={() => setActiveFormType("consultation")}
+                    onClick={() => window.open("https://calendly.com/waniyafrommaash/30min", "_blank")}
                     className="bg-white border border-[#7a6200]/15 p-6 rounded-2xl hover:border-[#7a6200]/40 hover:-translate-y-1 hover:shadow-md hover:shadow-[#7a6200]/5 transition-all duration-300 flex flex-col justify-between cursor-pointer group border-b-2 hover:border-b-[#7a6200]"
                   >
                     <div className="flex gap-4">
@@ -879,13 +879,13 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
                 {/* BOTTOM CTA BUTTONS */}
                 <div className="border-t border-[#7a6200]/15 pt-8 flex flex-col sm:flex-row gap-4 justify-end">
                   <button
-                    onClick={() => setActiveFormType("consultation")}
+                    onClick={() => window.open("https://calendly.com/waniyafrommaash/30min", "_blank")}
                     className="bg-[#7a6200] hover:bg-[#8e7305] text-white font-bold text-xs uppercase tracking-wider py-3.5 px-6 rounded-full shadow-md active:scale-[0.98] transition-all cursor-pointer"
                   >
                     Explore L&D Packages
                   </button>
                   <button
-                    onClick={onBookMeeting}
+                    onClick={() => window.open("https://calendly.com/waniyafrommaash/30min", "_blank")}
                     className="border border-[#1f310c]/30 hover:border-[#1f310c] hover:bg-[#1f310c]/5 text-[#1f310c] font-bold text-xs uppercase tracking-wider py-3.5 px-6 rounded-full active:scale-[0.98] transition-all cursor-pointer"
                   >
                     Book a Meeting
@@ -985,7 +985,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
                   
                   <div className="flex flex-col items-center sm:items-start lg:items-end flex-shrink-0 gap-2 relative z-10">
                     <button
-                      onClick={() => setActiveFormType("consultation")}
+                      onClick={() => window.open("https://calendly.com/waniyafrommaash/30min", "_blank")}
                       className="bg-[#7a6200] hover:bg-[#8e7305] text-[#FAF8F3] font-sans font-bold text-xs uppercase tracking-wider py-3.5 px-6 rounded-full shadow-lg hover:shadow-xl active:scale-95 transition-all cursor-pointer inline-flex items-center gap-2"
                     >
                       Request Consultation <ArrowRight size={14} />
@@ -1512,7 +1512,7 @@ export default function PersonaSelector({ onBookMeeting, activePersona, setActiv
               )}
 
               {/* FORM 6: 30-MINUTE CONSULTATION */}
-              {activeFormType === "consultation" && (
+              {false && (
                 <div>
                   {!consultationSubmitted ? (
                     <form onSubmit={(e) => handleFormSubmit(e, "consultation")}>

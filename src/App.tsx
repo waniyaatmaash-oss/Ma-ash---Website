@@ -4,8 +4,8 @@ import { ArrowRight, Sparkles, AlertCircle, Info, ArrowUp } from "lucide-react";
 import { smoothScrollToTop } from "./utils/scroll";
 import Navbar from "./components/Navbar";
 import SkylineSVG from "./components/SkylineSVG";
-import MeetingModal from "./components/MeetingModal";
 import WorksModal from "./components/WorksModal";
+import LazySection from "./components/LazySection";
 import OurWhySection from "./components/OurWhySection";
 import TrustedBy from "./components/TrustedBy";
 import PersonaSelector from "./components/PersonaSelector";
@@ -17,7 +17,6 @@ import ContactAndCareers from "./components/ContactAndCareers";
 import TornPaperDivider from "./components/TornPaperDivider";
 
 export default function App() {
-  const [isBookingOpen, setIsBookingOpen] = useState<boolean>(false);
   const [isWorksOpen, setIsWorksOpen] = useState<boolean>(false);
   const [activePersona, setActivePersona] = useState<string>("educationists");
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
@@ -58,7 +57,6 @@ export default function App() {
 
       {/* Primary Navigation */}
       <Navbar
-        onBookMeeting={() => setIsBookingOpen(true)}
         onSelectPersona={setActivePersona}
       />
 
@@ -131,44 +129,50 @@ export default function App() {
       <TornPaperDivider />
 
       {/* Mission Narrative & Interactive Statistics (Second Page) */}
-      <OurWhySection />
+      <LazySection>
+        <OurWhySection />
+      </LazySection>
 
       {/* Section 3: Trusted By */}
-      <TrustedBy onBookMeeting={() => setIsBookingOpen(true)} />
+      <LazySection>
+        <TrustedBy />
+      </LazySection>
 
       {/* Section 4: Persona Selector (Audience Offering sections) */}
-      <PersonaSelector 
-        onBookMeeting={() => setIsBookingOpen(true)}
-        activePersona={activePersona}
-        setActivePersona={setActivePersona}
-      />
+      <LazySection>
+        <PersonaSelector 
+          activePersona={activePersona}
+          setActivePersona={setActivePersona}
+        />
+      </LazySection>
 
       {/* Section 5: The Founders */}
-      <Founders />
+      <LazySection>
+        <Founders />
+      </LazySection>
 
       {/* Section 6: Community */}
-      <Community />
+      <LazySection>
+        <Community />
+      </LazySection>
 
       {/* Section 7: What's Next (Roadmap) */}
-      <WhatsNext />
+      <LazySection>
+        <WhatsNext />
+      </LazySection>
 
-      <ContactAndCareers 
-        onSelectPersona={setActivePersona}
-      />
+      <LazySection>
+        <ContactAndCareers 
+          onSelectPersona={setActivePersona}
+        />
+      </LazySection>
  
       <Footer />
-
-      {/* Interactive Modal Layer: Meeting Scheduler */}
-      <MeetingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-      />
 
       {/* Interactive Modal Layer: How It Works */}
       <WorksModal
         isOpen={isWorksOpen}
         onClose={() => setIsWorksOpen(false)}
-        onBookMeeting={() => setIsBookingOpen(true)}
       />
 
       {/* Floating Scroll To Top Button */}
